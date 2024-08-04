@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  padding: 20px;
+  background-color: white;
+  text-align: center;
+  color: #333;
+  font-family: "Arial", sans-serif;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+p {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+button {
+  cursor: pointer;
+  background-color: rgb(59, 59, 79);
+  border: 3px solid white;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1em;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: rgb(79, 79, 99);
+  transform: scale(1.05);
+}
+
+input {
+  background-color: rgb(10, 10, 35);
+  color: white;
+  border: 1px solid rgb(59, 59, 79);
+  padding: 10px;
+  font-size: 1em;
+  margin-bottom: 10px;
+  width: calc(100% - 22px); /* Ensure input fits within the form */
+  max-width: 400px; /* Limit input width for larger screens */
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.results {
+  margin-top: 20px;
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.result-card {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  flex: 1 1 calc(33.333% - 20px); /* 3 cards per row with space in between */
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.result-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.result-card p {
+  margin: 0;
+}
+
+.result-card .bold {
+  margin-top: 10px;
+}
+
+/* Media query for screens with a maximum width of 768px */
+@media (max-width: 768px) {
+  .result-card {
+    flex: 1 1 calc(50% - 20px); /* 2 cards per row with space in between */
+  }
+}
+
+/* Media query for screens with a maximum width of 480px */
+@media (max-width: 480px) {
+  .result-card {
+    flex: 1 1 calc(100% - 20px); /* 1 card per row with space in between */
+  }
+}
